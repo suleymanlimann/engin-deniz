@@ -69,6 +69,11 @@ const HERO_IMG = "/images/opdr-hero.jpg";
 const SURGERY_IMG = "/images/op-surgery.jpg";
 const AVATAR_IMG = "/images/op-avatar.jpg";
 
+const galleryImage1 = "/images/gallery-1.jpg";
+const galleryImage2 = "/images/gallery-2.jpg";
+const galleryImage3 = "/images/gallery-3.jpg";
+
+
 // ---- Fallback Yorumlar ----
 const FALLBACK_REVIEWS = [
   {
@@ -406,54 +411,90 @@ export default function DrMicoogullari() {
             </div>
           </div>
 
-          <div className="relative">
-            <div className="overflow-hidden">
-              <div
-                className="grid grid-flow-col auto-cols-[minmax(280px,1fr)] gap-4 transition-transform duration-300 ease-out"
-                style={{ transform: `translateX(-${reviewSlider.index * 100}%)` }}
-              >
-                {reviewSlider.items.map((r, i) => (
-                  <Card key={i} className="rounded-2xl border-sky-100">
-                    <CardContent className="p-5">
-                      <div className="flex items-center justify-between mb-2">
-                        <div className="font-semibold truncate max-w-[70%]">{r.author_name}</div>
-                        <div className="flex items-center gap-1">
-                          {Array.from({ length: 5 }).map((_, s) => (
-                            <Star
-                              key={s}
-                              className={`w-4 h-4 ${s < (r.rating || 0) ? "fill-yellow-400 stroke-yellow-400" : "stroke-slate-300"}`}
-                            />
-                          ))}
-                        </div>
+          {/* MOBILE: native swipe */}
+          <div className="relative md:hidden">
+            <div
+              id="reviewsTrack"
+              className="flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth touch-pan-x [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+              aria-label="Google yorumları kaydırılabilir liste"
+            >
+              {reviewSlider.items.map((r, i) => (
+                <Card key={i} className="rounded-2xl border-sky-100 snap-center shrink-0 w-[85vw]">
+                  <CardContent className="p-5">
+                    <div className="flex items-center justify-between mb-2">
+                      <div className="font-semibold truncate max-w-[70%]">{r.author_name}</div>
+                      <div className="flex items-center gap-1">
+                        {Array.from({ length: 5 }).map((_, s) => (
+                          <Star key={s} className={`w-4 h-4 ${s < (r.rating || 0) ? 'fill-yellow-400 stroke-yellow-400' : 'stroke-slate-300'}`} />
+                        ))}
                       </div>
-                      {r.text && <p className="text-sm text-slate-600 line-clamp-4">{r.text}</p>}
-                      {r.relative_time_description && (
-                        <div className="text-xs text-slate-500 mt-3">{r.relative_time_description}</div>
-                      )}
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
+                    </div>
+                    {r.text && <p className="text-sm text-slate-600 line-clamp-4">{r.text}</p>}
+                    {r.relative_time_description && (
+                      <div className="text-xs text-slate-500 mt-3">{r.relative_time_description}</div>
+                    )}
+                  </CardContent>
+                </Card>
+              ))}
             </div>
 
+            {/* Mobile controls */}
             <div className="flex items-center justify-end gap-2 mt-4">
-              <Button variant="outline" size="icon" aria-label="Önceki" onClick={reviewSlider.prev} disabled={reviewSlider.index <= 0}>
+              <Button
+                variant="outline"
+                size="icon"
+                aria-label="Önceki"
+                onClick={() => {
+                  const el = document.getElementById('reviewsTrack');
+                  if (!el) return;
+                  const first = el.querySelector(':scope > *');
+                  const cardWidth = first?.getBoundingClientRect().width || el.clientWidth * 0.9;
+                  el.scrollBy({ left: -(cardWidth + 16), behavior: 'smooth' });
+                }}
+              >
                 <ChevronLeft className="w-4 h-4" />
               </Button>
               <Button
                 variant="outline"
                 size="icon"
                 aria-label="Sonraki"
-                onClick={reviewSlider.next}
-                disabled={reviewSlider.index >= reviewSlider.maxIndex}
+                onClick={() => {
+                  const el = document.getElementById('reviewsTrack');
+                  if (!el) return;
+                  const first = el.querySelector(':scope > *');
+                  const cardWidth = first?.getBoundingClientRect().width || el.clientWidth * 0.9;
+                  el.scrollBy({ left: cardWidth + 16, behavior: 'smooth' });
+                }}
               >
                 <ChevronRight className="w-4 h-4" />
               </Button>
             </div>
+          </div>
 
+          {/* DESKTOP/TABLET: clean 3-column grid (no scroll) */}
+          <div className="hidden md:grid grid-cols-2 lg:grid-cols-3 gap-4">
+            {reviewSlider.items.slice(0, 6).map((r, i) => (
+              <Card key={i} className="rounded-2xl border-sky-100">
+                <CardContent className="p-5">
+                  <div className="flex items-center justify-between mb-2">
+                    <div className="font-semibold truncate max-w-[70%]">{r.author_name}</div>
+                    <div className="flex items-center gap-1">
+                      {Array.from({ length: 5 }).map((_, s) => (
+                        <Star key={s} className={`w-4 h-4 ${s < (r.rating || 0) ? 'fill-yellow-400 stroke-yellow-400' : 'stroke-slate-300'}`} />
+                      ))}
+                    </div>
+                  </div>
+                  {r.text && <p className="text-sm text-slate-600 line-clamp-3">{r.text}</p>}
+                  {r.relative_time_description && (
+                    <div className="text-xs text-slate-500 mt-3">{r.relative_time_description}</div>
+                  )}
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
+
 
       {/* GALERİ */}
       <section id="galeri" className="py-12">
@@ -461,19 +502,19 @@ export default function DrMicoogullari() {
           <h2 className="text-3xl font-bold mb-6">Fotoğraf Galerisi</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             <MediaBox
-              src={HERO_IMG}
+              src={galleryImage1}
               alt="Portre"
               className="[&>img]:object-contain bg-slate-100 h-[250px]"
               ratio="aspect-auto"
             />
             <MediaBox
-              src={SURGERY_IMG}
+              src={galleryImage2}
               alt="Ameliyathane"
               className="[&>img]:object-contain bg-slate-100 h-[250px]"
               ratio="aspect-auto"
             />
             <MediaBox
-              src={AVATAR_IMG}
+              src={galleryImage3}
               alt="Portre"
               className="[&>img]:object-contain bg-slate-100 h-[250px]"
               ratio="aspect-auto"
