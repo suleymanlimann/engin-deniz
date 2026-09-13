@@ -79,6 +79,8 @@ const galleryImage1 = "/images/gallery-1.jpg";
 const galleryImage2 = "/images/gallery-2.jpg";
 const galleryImage3 = "/images/gallery-3.jpg";
 
+const SEO_DESCRIPTION = "Kocaeli ve İzmit burun estetiği, rinoplasti, septorinoplasti, botoks, dudak dolgusu ve vertigo tedavisi için uzman doktor Engin Deniz Miçooğulları.";
+
 const FALLBACK_REVIEWS = [
   {
     author_name: "T*** B***",
@@ -137,6 +139,18 @@ export default function DrMicoogullari() {
 
   useEffect(() => {
     if (typeof document === "undefined") return;
+
+    const title = "Engin Deniz Miçooğulları | Kocaeli KBB ve Burun Estetiği";
+    document.title = title;
+
+    let metaDescription = document.querySelector('meta[name="description"]');
+    if (!metaDescription) {
+      metaDescription = document.createElement("meta");
+      metaDescription.setAttribute("name", "description");
+      document.head.appendChild(metaDescription);
+    }
+    metaDescription.setAttribute("content", SEO_DESCRIPTION);
+
     const ld = {
       "@context": "https://schema.org",
       "@type": "Physician",
@@ -210,11 +224,11 @@ export default function DrMicoogullari() {
         <div className="max-w-7xl mx-auto px-4 md:px-6 py-10 lg:py-12 grid lg:grid-cols-2 gap-8 items-center">
           <div>
             <motion.h1 initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="text-4xl md:text-5xl font-extrabold leading-tight">
-              KBB Uzmanı & Rinoplasti
-              <span className="text-sky-700 block">Doğal Görünüm, Rahat Nefes</span>
+              Burun Estetiği Kocaeli | Rinoplasti & Septorinoplasti
+              <span className="text-sky-700 block">Dr. Engin Deniz Miçooğulları – İzmit KBB Uzmanı</span>
             </motion.h1>
             <p className="mt-4 text-base md:text-lg text-slate-600 max-w-prose">
-              22+ yıllık deneyimle rinoplasti, septorhinoplasti, botox, dolgu, sinüzit, vertigo, alerji, horlama ve kulak hastalıklarında kapsamlı yaklaşım.
+              22+ yıllık deneyimle Kocaeli ve İzmit’te burun estetiği, rinoplasti, septorinoplasti, botoks, dudak dolgusu, vertigo ve KBB tedavilerinde doğal görünüm ve rahat nefes odaklı yaklaşım sunuyoruz.
             </p>
             <div className="mt-5 flex flex-wrap gap-3">
               <Button asChild size="lg"><a href={TEL_LINK}><Phone className="w-5 h-5 mr-2" /> (0262) 323 02 02</a></Button>
@@ -263,9 +277,7 @@ export default function DrMicoogullari() {
             <div className="lg:col-span-2">
               <h2 className="text-3xl font-bold mb-4">Hakkında</h2>
               <p className="text-slate-700 leading-relaxed">
-                Op. Dr. Engin Deniz Miçooğulları; doğal görünüm ve sağlıklı nefes dengesini merkeze alan, kişiye özel planlama
-                ve fonksiyonel sonuç odaklı yaklaşımıyla KBB ve rinoplasti cerrahisinde hizmet vermektedir. Her hastada yüz
-                uyumu, nefes kalitesi ve güvenli iyileşme basamaklarını birlikte ele alır.
+                Op. Dr. Engin Deniz Miçooğulları; Kocaeli ve İzmit’te burun estetiği, rinoplasti ve septorinoplasti alanında doğal görünüm ile sağlıklı nefes dengesini bir araya getiren bir KBB uzmanıdır. Kişiye özel planlama, yüz uyumu ve fonksiyonel sonuç odaklı yaklaşımıyla hastaların hem estetik memnuniyetini hem de nefes kalitesini önceliklendirir.
               </p>
               <ul className="mt-5 space-y-2 text-slate-700">
                 {[
@@ -301,11 +313,11 @@ export default function DrMicoogullari() {
           <h2 className="text-3xl font-bold mb-7">Uzmanlık Alanları</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {[
-              { title: "Rinoplasti & Septorhinoplasti", desc: "Estetik ve fonksiyonel denge – doğal görünüm, rahat nefes." },
-              { title: "Botox", desc: "Yüzdeki kas sertleşmelerini azaltmak için kullanılan botulinum toksini." },
-              { title: "Dolgu", desc: "Yüzdeki derinlikleri doldurmak için kullanılan dolgu maddeleri." },
+              { title: "Rinoplasti & Septorinoplasti", desc: "Burun estetiği, rinoplasti ve septorinoplasti tedavilerinde doğal görünüm ile rahat nefes hedefi." },
+              { title: "Botoks", desc: "Yüz botoksu, estetik botoks ve botoks uygulamaları için güvenli değerlendirme ve kişisel tedavi planlaması." },
+              { title: "Dudak Dolgusu", desc: "Dudak dolgusu ve yüz dolgu uygulamalarıyla daha canlı ve doğal bir görünüm hedefi." },
               { title: "Sinüzit", desc: "Endoskopik yaklaşımlar, medikal ve cerrahi tedavi seçenekleri." },
-              { title: "Vertigo", desc: "Denge bozuklukları için kapsamlı değerlendirme ve tedavi." },
+              { title: "Vertigo", desc: "Denge bozuklukları, vertigo ve baş dönmesi için kapsamlı değerlendirme ve tedavi." },
               { title: "Alerji & Horlama", desc: "Üst hava yolları sorunlarında etkili çözümler." },
               { title: "Kulak Hastalıkları", desc: "Tinnitus, otoskleroz, kulak zarı problemleri ve daha fazlası." },
               { title: "Baş-Boyun Cerrahisi", desc: "Vokal kord paralizileri ve sinirsel rahatsızlıklar." },
