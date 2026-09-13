@@ -203,7 +203,7 @@ export default function DrMicoogullari() {
             <img src={AVATAR_IMG} onError={fallbackImg} alt="Dr. Avatar" width={40} height={40} className="w-10 h-10 rounded-full border object-cover" />
             Op. Dr. Engin Deniz Miçooğulları
           </a>
-          <nav className="hidden md:flex items-center gap-5 text-sm">
+          <nav aria-label="Ana navigasyon" className="hidden md:flex items-center gap-5 text-sm">
             <a href="#hakkinda" className="hover:text-sky-700">Hakkında</a>
             <a href="#uzmanlik" className="hover:text-sky-700">Uzmanlık</a>
             <a href="#deneyim" className="hover:text-sky-700">Deneyim</a>
@@ -224,7 +224,7 @@ export default function DrMicoogullari() {
         <div className="max-w-7xl mx-auto px-4 md:px-6 py-10 lg:py-12 grid lg:grid-cols-2 gap-8 items-center">
           <div>
             <motion.h1 initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="text-4xl md:text-5xl font-extrabold leading-tight">
-              KBB Uzmanı & Rinoplasti
+              Kocaeli Burun Estetiği, Rinoplasti ve KBB Uzmanı
 
               <span className="text-sky-700 block">Doğal Görünüm, Rahat Nefes</span>
             </motion.h1>
@@ -276,7 +276,7 @@ export default function DrMicoogullari() {
         <div className="max-w-7xl mx-auto px-4 md:px-6">
           <div className="grid lg:grid-cols-3 gap-8 items-start">
             <div className="lg:col-span-2">
-              <h2 className="text-3xl font-bold mb-4">Hakkında</h2>
+              <h2 className="text-3xl font-bold mb-4">Kocaeli Burun Estetiği Hakkında</h2>
               <p className="text-slate-700 leading-relaxed">
                 Op. Dr. Engin Deniz Miçooğulları; Kocaeli ve İzmit’te burun estetiği, rinoplasti ve septorinoplasti alanında doğal görünüm ile sağlıklı nefes dengesini bir araya getiren bir KBB uzmanıdır. Kişiye özel planlama, yüz uyumu ve fonksiyonel sonuç odaklı yaklaşımıyla hastaların hem estetik memnuniyetini hem de nefes kalitesini önceliklendirir.
               </p>
@@ -311,7 +311,7 @@ export default function DrMicoogullari() {
       {/* UZMANLIK */}
       <section id="uzmanlik" className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 md:px-6">
-          <h2 className="text-3xl font-bold mb-7">Uzmanlık Alanları</h2>
+          <h2 className="text-3xl font-bold mb-7">Kocaeli Burun Estetiği Uzmanlık Alanları</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {[
               { title: "Rinoplasti & Septorinoplasti", desc: "Burun estetiği, rinoplasti ve septorinoplasti tedavilerinde doğal görünüm ile rahat nefes hedefi." },
@@ -335,7 +335,7 @@ export default function DrMicoogullari() {
       {/* DENEYİM – kronoloji burada */}
       <section id="deneyim" className="py-12">
         <div className="max-w-7xl mx-auto px-4 md:px-6">
-          <h2 className="text-3xl font-bold mb-7">Mesleki Deneyim</h2>
+          <h2 className="text-3xl font-bold mb-7">KBB Uzmanı Deneyimi</h2>
           <div className="relative pl-6 border-l-2 border-sky-100 space-y-7">
             {[
               { years: "2023–günümüz", place: "Özel Aktif International  Kocaeli Hastanesi", role: "KBB Uzmanı" },
@@ -361,7 +361,7 @@ export default function DrMicoogullari() {
       <section id="yorumlar" className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 md:px-6">
           <div className="flex items-center justify-between mb-6">
-            <h2 className="text-3xl font-bold">Google Yorumları</h2>
+            <h2 className="text-3xl font-bold">Hasta Yorumları ve Google Değerlendirmeleri</h2>
             <div className="flex items-center gap-2 text-slate-600 text-sm">
               <Sparkles className="w-4 h-4" /> Doğrulanmış hasta görüşleri
               <Button asChild variant="outline" className="ml-3"><a href={GOOGLE_SHARE} target="_blank" rel="noreferrer">Google’da Gör</a></Button>
@@ -435,7 +435,7 @@ export default function DrMicoogullari() {
       {/* GALERİ */}
       <section id="galeri" className="py-12">
         <div className="max-w-7xl mx-auto px-4 md:px-6">
-          <h2 className="text-3xl font-bold mb-6">Fotoğraf Galerisi</h2>
+          <h2 className="text-3xl font-bold mb-6">Burun Estetiği Öncesi ve Sonrası Galerisi</h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
@@ -465,7 +465,7 @@ export default function DrMicoogullari() {
       <section id="instagram" className="py-12">
         <div className="max-w-7xl mx-auto px-4 md:px-6">
           <div className="flex items-center justify_between mb-6">
-            <h2 className="text-3xl font-bold">Instagram</h2>
+            <h2 className="text-3xl font-bold">Instagram'da Son Paylaşımlar</h2>
             <Button asChild variant="ghost"><a href={IG_URL}><Instagram className="w-4 h-4 mr-2" /> @estetikburundoktorum</a></Button>
           </div>
           <div className="rounded-2xl overflow-hidden border">
