@@ -79,7 +79,7 @@ const galleryImage1 = "/images/gallery-1.jpg";
 const galleryImage2 = "/images/gallery-2.jpg";
 const galleryImage3 = "/images/gallery-3.jpg";
 
-const SEO_DESCRIPTION = "Kocaeli ve İzmit burun estetiği, rinoplasti, septorinoplasti, botoks, dudak dolgusu ve vertigo tedavisi için uzman doktor Engin Deniz Miçooğulları.";
+const SEO_DESCRIPTION = "22+ yıllık tecrübeli Kocaeli burun estetiği, rinoplasti, septorinoplasti, botoks, dudak dolgusu ve vertigo tedavisi için uzman doktor Engin Deniz Miçooğulları.";
 
 const FALLBACK_REVIEWS = [
   {
@@ -140,7 +140,7 @@ export default function DrMicoogullari() {
   useEffect(() => {
     if (typeof document === "undefined") return;
 
-    const title = "Engin Deniz Miçooğulları | Kocaeli KBB ve Burun Estetiği";
+    const title = "22+ Yıllık Tecrübe ile Kocaeli Burun Estetiği | Rinoplasti, Septorinoplasti ve KBB Uzmanı";
     document.title = title;
 
     let metaDescription = document.querySelector('meta[name="description"]');
@@ -224,11 +224,11 @@ export default function DrMicoogullari() {
         <div className="max-w-7xl mx-auto px-4 md:px-6 py-10 lg:py-12 grid lg:grid-cols-2 gap-8 items-center">
           <div>
             <motion.h1 initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="text-4xl md:text-5xl font-extrabold leading-tight">
-              Burun Estetiği Kocaeli | Rinoplasti & Septorinoplasti
-              <span className="text-sky-700 block">Dr. Engin Deniz Miçooğulları – İzmit KBB Uzmanı</span>
+              22+ Yıllık Tecrübe ile Kocaeli Burun Estetiği
+              <span className="text-sky-700 block">Rinoplasti & Septorinoplasti Uzmanı – Dr. Engin Deniz Miçooğulları</span>
             </motion.h1>
             <p className="mt-4 text-base md:text-lg text-slate-600 max-w-prose">
-              22+ yıllık deneyimle Kocaeli ve İzmit’te burun estetiği, rinoplasti, septorinoplasti, botoks, dudak dolgusu, vertigo ve KBB tedavilerinde doğal görünüm ve rahat nefes odaklı yaklaşım sunuyoruz.
+              22+ yıllık deneyimle Kocaeli burun estetiği, rinoplasti, septorinoplasti, botoks, dudak dolgusu ve vertigo tedavilerinde doğal görünüm ve rahat nefes hedefiyle hizmet veriyoruz. İzmit ve Kocaeli’de güvenli, kişiye özel bir yaklaşım sunuyoruz.
             </p>
             <div className="mt-5 flex flex-wrap gap-3">
               <Button asChild size="lg"><a href={TEL_LINK}><Phone className="w-5 h-5 mr-2" /> (0262) 323 02 02</a></Button>
