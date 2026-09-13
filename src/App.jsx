@@ -65,7 +65,7 @@ function RelativeTime({ date, intervalMs = 60_000 }) {
 // ---- Site Sabitleri ----
 const GOOGLE_PLACE_EMBED =
   "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3069.450203244178!2d29.865488315372503!3d40.70236867933165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cb51dd90bacdfb%3A0x977d831225014c2f!2sYenik%C3%B6y%20Merkez%2C%20Tekno%20Park%20Cd%20No%3A13%2C%2041275%20Ba%C5%9Fiskele%2FKocaeli!5e0!3m2!1str!2str!4v1693249999999!5m2!1str!2str";
-const WHATSAPP_LINK = "https://wa.me/905017256051";
+const WHATSAPP_LINK = "https://wa.me/905014695244";
 const TEL_LINK = "tel:+902623230202";
 const IG_URL = "https://www.instagram.com/estetikburundoktorum?igsh=bTZjMjFlYml5NGN2";
 const FB_URL =
@@ -214,17 +214,17 @@ export default function DrMicoogullari() {
               <span className="text-sky-700 block">Doğal Görünüm, Rahat Nefes</span>
             </motion.h1>
             <p className="mt-4 text-base md:text-lg text-slate-600 max-w-prose">
-              21+ yıllık deneyimle rinoplasti, septorhinoplasti, sinüzit, vertigo, alerji, horlama ve kulak hastalıklarında kapsamlı yaklaşım.
+              22+ yıllık deneyimle rinoplasti, septorhinoplasti, sinüzit, vertigo, alerji, horlama ve kulak hastalıklarında kapsamlı yaklaşım.
             </p>
             <div className="mt-5 flex flex-wrap gap-3">
               <Button asChild size="lg"><a href={TEL_LINK}><Phone className="w-5 h-5 mr-2" /> (0262) 323 02 02</a></Button>
-              <Button asChild size="lg" variant="secondary"><a href={WHATSAPP_LINK}><MessageCircle className="w-5 h-5 mr-2" /> 0501 725 60 51</a></Button>
+              <Button asChild size="lg" variant="secondary"><a href={WHATSAPP_LINK}><MessageCircle className="w-5 h-5 mr-2" /> +90 0501 469 52 44</a></Button>
               <Button asChild size="lg" variant="ghost"><a href={IG_URL}><Instagram className="w-5 h-5 mr-2" /> Instagram</a></Button>
               <Button asChild size="lg" variant="ghost"><a href={FB_URL}><Facebook className="w-5 h-5 mr-2" /> Facebook</a></Button>
             </div>
             <div className="mt-5 flex items-center gap-3">
               <img src={AVATAR_IMG} onError={fallbackImg} alt="Op. Dr. Engin Deniz Miçooğulları" width={48} height={48} className="w-12 h-12 rounded-full border object-cover" />
-              <Badge variant="secondary" className="text-sky-800">21+ Yıl Deneyim</Badge>
+              <Badge variant="secondary" className="text-sky-800">22+ Yıl Deneyim</Badge>
               <Badge variant="outline" className="border-sky-200">Rinoplasti • Sinüzit • Vertigo • KBB</Badge>
             </div>
           </div>
@@ -248,7 +248,7 @@ export default function DrMicoogullari() {
             <div className="mt-4 grid grid-cols-2 gap-4">
               <MediaBox src={SURGERY_IMG} alt="Ameliyathane" ratio="aspect-[5/3] rounded-2xl" className="[&>img]:object-cover shadow-md" />
               <div className="grid gap-4">
-                <Card className="rounded-2xl"><CardContent className="p-5"><div className="text-2xl font-extrabold tracking-tight">21+ Yıl</div><div className="text-slate-600">Deneyim</div></CardContent></Card>
+                <Card className="rounded-2xl"><CardContent className="p-5"><div className="text-2xl font-extrabold tracking-tight">22+ Yıl</div><div className="text-slate-600">Deneyim</div></CardContent></Card>
                 <Card className="rounded-2xl"><CardContent className="p-5"><div className="text-2xl font-extrabold tracking-tight">%98+</div><div className="text-slate-600">Hasta Memnuniyeti</div></CardContent></Card>
               </div>
             </div>
@@ -323,12 +323,13 @@ export default function DrMicoogullari() {
           <h2 className="text-3xl font-bold mb-7">Mesleki Deneyim</h2>
           <div className="relative pl-6 border-l-2 border-sky-100 space-y-7">
             {[
-              { years: "2023–günümüz", place: "Özel Aktif Kocaeli Hastanesi", role: "KBB Uzmanı" },
+              { years: "2023–günümüz", place: "Özel Aktif International  Kocaeli Hastanesi", role: "KBB Uzmanı" },
               { years: "2017–2023", place: "Özel Defne Hastanesi", role: "KBB Uzmanı" },
-              { years: "2014–2017", place: "Hatay Dörtyol Devlet Hastanesi", role: "KBB" },
-              { years: "2007–2008", place: "Yeni Yüzyıl Eğitim Araştırma Hastanesi", role: "KBB" },
-              { years: "2005–2007", place: "SGK Sağlık İşleri Müdürlüğü Adana", role: "Hekim" },
-              { years: "2004–2005", place: "Siirt 50. Yıl SGK Hastanesi & Adıyaman Besni Aile Sağlığı Merkezi", role: "Hekim" },
+              { years: "2014–2017", place: "Hatay Eğitim Araştırma Hastanesi", role: "KBB Uzmanı" },
+              { years: "2012–2014", place: "Hatay Dörtyol Devlet Hastanesi", role: "KBB Uzmanı" },
+              { years: "2007–2012", place: "Van Yüzüncü Yıl  Eğitim Araştırma Hastanesi", role: "KBB Araştırma Görevlisi" },
+              { years: "2005–2007", place: "Adana SGK Sağlık İşleri Müdürlüğü ", role: "Hekim" },
+              { years: "2004–2005", place: "Siirt 50. Yıl SSK Hastanesi & Adıyaman Besni Aile Sağlığı Merkezi", role: "Hekim" },
             ].map((e, i) => (
               <div key={i} className="ml-2">
                 <div className="w-3 h-3 bg-sky-500 rounded-full -ml-[1.15rem] mb-2" />
