@@ -214,7 +214,7 @@ export default function DrMicoogullari() {
               <span className="text-sky-700 block">Doğal Görünüm, Rahat Nefes</span>
             </motion.h1>
             <p className="mt-4 text-base md:text-lg text-slate-600 max-w-prose">
-              22+ yıllık deneyimle rinoplasti, septorhinoplasti, sinüzit, vertigo, alerji, horlama ve kulak hastalıklarında kapsamlı yaklaşım.
+              22+ yıllık deneyimle rinoplasti, septorhinoplasti, botox, dolgu, sinüzit, vertigo, alerji, horlama ve kulak hastalıklarında kapsamlı yaklaşım.
             </p>
             <div className="mt-5 flex flex-wrap gap-3">
               <Button asChild size="lg"><a href={TEL_LINK}><Phone className="w-5 h-5 mr-2" /> (0262) 323 02 02</a></Button>
@@ -271,7 +271,7 @@ export default function DrMicoogullari() {
                 {[
                   "Yaklaşım: Doğal görünüm + rahat nefes. Her vakada fonksiyonu estetik kadar öncelemek.",
                   "Planlama: Muayene, foto/video analiz ve beklentilerin netleştirildiği kişiye özel cerrahi plan.",
-                  "Tedavi kapsamı: Rinoplasti & septorhinoplasti, sinüzit, vertigo, alerji, horlama ve kulak hastalıkları.",
+                  "Tedavi kapsamı: Rinoplasti & septorhinoplasti, botox, dolgu, sinüzit, vertigo, alerji, horlama ve kulak hastalıkları.",
                   "Takip: Minimal morluk/şişlik hedefi, düzenli kontroller ve kolay ulaşılabilir iletişim.",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-2">
@@ -302,6 +302,8 @@ export default function DrMicoogullari() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {[
               { title: "Rinoplasti & Septorhinoplasti", desc: "Estetik ve fonksiyonel denge – doğal görünüm, rahat nefes." },
+              { title: "Botox", desc: "Yüzdeki kas sertleşmelerini azaltmak için kullanılan botulinum toksini." },
+              { title: "Dolgu", desc: "Yüzdeki derinlikleri doldurmak için kullanılan dolgu maddeleri." },
               { title: "Sinüzit", desc: "Endoskopik yaklaşımlar, medikal ve cerrahi tedavi seçenekleri." },
               { title: "Vertigo", desc: "Denge bozuklukları için kapsamlı değerlendirme ve tedavi." },
               { title: "Alerji & Horlama", desc: "Üst hava yolları sorunlarında etkili çözümler." },
