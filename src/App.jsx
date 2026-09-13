@@ -224,8 +224,9 @@ export default function DrMicoogullari() {
         <div className="max-w-7xl mx-auto px-4 md:px-6 py-10 lg:py-12 grid lg:grid-cols-2 gap-8 items-center">
           <div>
             <motion.h1 initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="text-4xl md:text-5xl font-extrabold leading-tight">
-              22+ Yıllık Tecrübe ile Kocaeli Burun Estetiği
-              <span className="text-sky-700 block">Rinoplasti & Septorinoplasti Uzmanı – Dr. Engin Deniz Miçooğulları</span>
+              KBB Uzmanı & Rinoplasti
+
+              <span className="text-sky-700 block">Doğal Görünüm, Rahat Nefes</span>
             </motion.h1>
             <p className="mt-4 text-base md:text-lg text-slate-600 max-w-prose">
               22+ yıllık deneyimle Kocaeli burun estetiği, rinoplasti, septorinoplasti, botoks, dudak dolgusu ve vertigo tedavilerinde doğal görünüm ve rahat nefes hedefiyle hizmet veriyoruz. İzmit ve Kocaeli’de güvenli, kişiye özel bir yaklaşım sunuyoruz.
